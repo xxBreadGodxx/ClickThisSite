@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download File</title>
+    <style>
+        body {
+            background-color: #4A4A4A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            background-color: #FF6600;
+            color: white;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #CC5200;
+        }
+    </style>
+</head>
+<body>
+    <button id="downloadBtn">Now Click This</button>
+    
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = "https://xxBreadGodxx.github.io/ClickThisSite/NowOpenThis.gif";
+            link.download = "NowOpenThis.gif";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
